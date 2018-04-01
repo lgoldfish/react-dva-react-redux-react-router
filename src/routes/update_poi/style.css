@@ -1,0 +1,301 @@
+.mapview {
+  width: 50%;
+  border-right: 2px solid #64b5f6;
+  position: relative;
+}
+.openImage {
+  position: fixed;
+  width: 30%;
+  top: 25%;
+  z-index: 10;
+  border-radius: 10px;
+  animation: animated_div 5s infinite;
+}
+@keyframes animated_div
+    {
+    0%        {transform: rotate(0deg);left:0px;}
+    25%        {transform: rotate(20deg);left:0px;}
+    50%        {transform: rotate(0deg);left:70%;}
+    55%        {transform: rotate(0deg);left:70%;}
+    70%        {transform: rotate(0deg);left:70%;}
+    100%      {transform: rotate(-360deg);left:0px;}
+    }
+#map {
+ position:absolute; top:0; bottom:0; width:100%; 
+}
+.poiupdate {
+  border-top: 2px solid #64b5f6;
+  height: 51%;
+  padding: 0 15px;
+  overflow: auto;
+}
+.poilist {
+  height: 49%;
+  position: relative;
+}
+.select {
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid #64b5f6;
+  overflow: auto;
+}
+.bottom_container {
+  display: flex;
+  height: calc(100% - 100px);
+}
+
+.poilist ul li {
+  float: left;
+}
+.bottom_right_container {
+  width: 50%;
+  height: 100%;
+}
+.search_box {
+  padding: 10px 30px;
+}
+.search_box input  , .searchPoi input{
+  width: 300px;
+  padding-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+}
+
+.search_button ,.searchPoi button , .featureTitle button  ,.poiupdate_form button{
+  background: #64b5f6;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 30px;
+  margin-right: 15px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.featureTitle button {
+  background: #FFFFFF;
+  color: #666666;
+}
+.featureTitle {
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+.searchPoi button:nth-of-type(1){
+  margin-right: 10px;
+}
+.mapName {
+  font-size: 20px;
+}
+.search_result {
+  padding: 0 30px;
+  display: flex;
+  height: 48px;
+  line-height: 48px;
+  vertical-align: middle;
+}
+.building_list {
+  margin-right: 50px;
+}
+.building_list,
+.floors_list {
+  display: flex;
+  vertical-align: middle;
+}
+.building_list span,
+.floors_list span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.building_list ul li,
+.floors_list ul li {
+  float: left;
+  border: 1px solid #64b5f6;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.mapList {
+  position: fixed;
+  z-index: 10;
+  top: 100px;
+  left: 30px;
+  background: #FFFFFF;
+  height: calc(100% - 100px);
+  overflow: auto;
+  padding-bottom: 50px;
+}
+.mapList ul li {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+.mapList ul li:hover {
+  background: #64b5f6;
+  cursor: pointer;
+}
+.mapList ul li:hover span {
+  color: #FFFFFF;
+}
+.mapList ul li:nth-of-type(1){
+  background: #64b5f6;
+  color: #ffffff;
+}
+.mapList ul li:nth-of-type(1) span {
+  color: #ffffff;
+}
+.mapList ul li span{
+  font-size: 14px;
+  line-height: 30px;
+}
+.mapList ul li span:nth-of-type(1){
+  display: inline-block;
+  width: 50px;
+} 
+.activeSelectedFloor {
+  background: #64b5f6!important;
+  color: #ffffff!important;
+}
+.searchPoi {
+  padding: 5px 20px;
+}
+.searchPoiTable td ,.searchPoiTable th {
+padding: 5px!important;
+cursor: pointer;
+}
+.searchPoiTable  {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow: auto;
+}
+.poitotal {
+  color: #64b5f6;
+  font-weight: bold;
+}
+.poiupdate_form > ul> li{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+.poiupdate_form > ul > li:nth-of-type(1){
+  background: #FAFAFA;
+  font-weight: bold;
+} 
+.poiupdate_form > ul >li > span {
+  text-align: center;
+  display: block;
+  width: 30%;
+}
+.poiupdate_form > ul > li > span:nth-last-of-type(1){
+  width: 40%;
+}
+.poiupdate_form button {
+  font-size: 20px;
+  padding: 6px 15px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.tips {
+  color: red;
+  font-size: 14px;
+}
+.categoryid {
+  position: relative;
+}
+.categoryidList {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  font-size: 14px;
+  background: #64b5f6;
+  margin-top: 5px;
+}
+.categoryidList > li {
+  line-height: 18px;
+  cursor: pointer;
+  border-bottom: 1px solid #FAFAFA;
+  text-align: left;
+}
+.categoryidList > li >span {
+color: #FFFFFF;
+display: inline;
+text-align: left;
+}
+.categoryidList > li:hover {
+  background: #FFFFFF;
+  color: #64b5f6;
+}
+.categoryidList > li:hover span{
+  color: #64b5f6;
+}
+.navitocheckpoi {
+  float: right;
+}
+.mapview_check {
+  height: calc( 100% - 100px);
+  width: 40%;
+  border-right: 2px solid #64b5f6;
+  display: inline-block;
+}
+.check_table {
+  height: calc(100% - 100px);
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: auto;
+}
+
+.search_result_check {
+  position: relative;
+  padding-right: 120px;
+}
+.check_pass  {
+  position: absolute;
+  right: 30px;
+  background: #64b5f6;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.check_table td {
+  padding: 6px 16px!important;
+}
+.check_floor {
+  display: flex;
+  padding: 5px 20px;
+}
+.check_floor ul {
+  display: flex;
+  line-height: 30px;
+}
+.check_floor button {
+  background: #64b5f6;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.check_floor ul li {
+}
